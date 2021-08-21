@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Canvas Portfolio</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet icon" href="https://sun9-50.userapi.com/impg/krxX1zOq8Z1soTGBDkwPteywAz64mwlq6BLUJQ/FXnaIyxZDcM.jpg?size=1004x847&quality=96&sign=fd6ecd12daf448b5700c92f075b93704&type=album">
+</head>
+<body>
+	<!--menu and button for change language -->
+	<header>
+		<div class="menu">
+			<div class="whoAmI">Who am I?</div>
+			<div class="myWorks">My works</div>
+			<div class="contacts">Contacts</div>
+		</div>
+
+		<h1 class="language">EN</h1>
+	</header>
+	<!--screen saver with my name -->
+	<canvas class="circlesAndName"></canvas>
+	<!--description of me-->
+	<div class="aboutMe">
+		<span class="descriptionOfMe">I'm Vladislav Prikhodko, a <span class="myAge">15</span>-y.o. frontend developer from Russia</span>
+	<!--my photo-->
+		<div class="wowItsMyPhoto">
+			<div class="part1"></div>
+			<div class="part2"></div>
+		</div>
+	<!--canvas drawing-->
+		<canvas class="fieldForDrawing"></canvas>
+	</div>	
+	<!--sliders about skills-->
+	<h1 class="mySkills">My skills</h1>
+
+	<div class="slidersAndPic">
+		<div class="fieldSlider">
+			<span class="firstValueSlider">0%</span>
+			<span class="lastValueSlider">100%</span>
+			<span class="nameOfSkill"
+			 onclick="window.open('https://en.wikipedia.org/wiki/HTML', '_blank');">HTML</span>
+			<span class="percentageOfStudy">75%</span>
+			<input type="range" min="0" max="100" value="75" class="slider">
+		</div>
+
+		<div class="fieldSlider">
+			<span class="firstValueSlider">0%</span>
+			<span class="lastValueSlider">100%</span>
+			<span class="nameOfSkill"
+			onclick="window.open('https://en.wikipedia.org/wiki/CSS', '_blank');">CSS</span>
+			<span class="percentageOfStudy">90%</span>
+			<input type="range" min="0" max="100" value="90" class="slider">
+		</div>
+
+		<div class="fieldSlider">
+			<span class="firstValueSlider">0%</span>
+			<span class="lastValueSlider">100%</span>
+			<span class="nameOfSkill"
+			onclick="window.open('https://en.wikipedia.org/wiki/JavaScript', '_blank');">JAVASCRIPT</span>
+			<span class="percentageOfStudy">55%</span>
+			<input type="range" min="0" max="100" value="55" class="slider">
+		</div>
+
+		<div class="fieldSlider">
+			<span class="firstValueSlider">0%</span>
+			<span class="lastValueSlider">100%</span>
+			<span class="nameOfSkill"
+			onclick="window.open('https://en.wikipedia.org/wiki/WordPress', '_blank');">WORDPRESS</span>
+			<span class="percentageOfStudy">30%</span>
+			<input type="range" min="0" max="100" value="30" class="slider">
+		</div>
+
+		<div class="fieldSlider">
+			<span class="firstValueSlider">0%</span>
+			<span class="lastValueSlider">100%</span>
+			<span class="nameOfSkill"
+			onclick="window.open('https://en.wikipedia.org/wiki/Canvas_element', '_blank');">CANVAS</span>
+			<span class="percentageOfStudy">65%</span>
+			<input type="range" min="0" max="100" value="65" class="slider">
+		</div>
+	</div>
+	<!--pic for beauty-->
+	<img src="pic/josuke.webp" alt="josuke with a laptop"
+	onclick="window.open('https://www.google.ru/search?q=josuke+higashikata&newwindow=1&sxsrf=ALeKk00Iak_ltGZ-S89y6N9pLRmggdj4hg%3A1625525834149&source=hp&ei=So7jYKvKBviB9u8PmtKDmAE&iflsig=AINFCbYAAAAAYOOcWsvZjAI5L4cGirqNeVW4nku7WDhe&oq=josuke+&gs_lcp=Cgdnd3Mtd2l6EAEYADICCAAyAggAMgIILjICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6CAgAELEDEIMBOgUILhCxAzoFCAAQsQM6CAguELEDEJMCOhEILhCxAxCDARDHARCvARCTAjoLCC4QsQMQxwEQowJQxQdY8zxgjVFoAXAAeACAAbQFiAGhF5IBCzAuMS4zLjEuMS4ymAEAoAEBqgEHZ3dzLXdpeg&sclient=gws-wiz', '_blank');" class="josukeWithLap">
+	<!--full description-->
+	<h2 class="fullDescription">I'm studying independently, I have been making websites since 2019, I have mastered 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS and 65% CANVAS, which allows you to draw on the field.<br>
+	I completed my first order on freelance and bragged to my parents. <br>
+	In 2021, I'm going to college to study as a programmer.</h2>
+
+	<!-- Aristotle's model -->
+	<canvas class="aristotle"></canvas>
+	
+	<!--footer-->
+	<div class="footer">
+		<span class="responsibility">I'm not responsible for the results of your dreams or propaganda drawings depicted in the sandbox</span>
+		<span class="year">2021</span>
+	</div>
+	<!--button for moving to up -->
+	<div class="toUp">
+		<div class="arrow"></div>
+	</div>
+
+	<!-- gsap for scroll -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+
+	<!-- three.js for model -->
+	<script src="model/three.min.js"></script>
+	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script> 
+
+	<script src="script.js"></script>
+</body>
+</html>
