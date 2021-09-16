@@ -21,12 +21,17 @@ const language = document.querySelector('.language');
 //heading
 const headingText = document.querySelector('.headingText');
 
+//
+const myWorks = document.querySelector('.myWorks');
+
 //if hover on this elem the value is assigned
 	header.onmouseover = (e) =>{
 		if (e.target.parentNode.localName == "div") {
 				e.target.style.backgroundColor = randomColor;
 				e.target.style.boxShadow =  `inset 2px 2px 5px ${lightRandomColor}, inset -2px -2px 5px ${dakrRandomColor}`;
 				e.target.style.color = '#000';
+
+				e.target.style.textDecoration = 'none';
 
 				//!decoration text
 				headingText.style.textShadow = `-2px -2px 10px ${randomColor}, 2px -2px 10px ${randomColor}, -2px 2px 10px ${randomColor}, 2px 2px 10px ${randomColor}`;
@@ -46,6 +51,8 @@ const headingText = document.querySelector('.headingText');
 				e.target.style.backgroundColor = '#000';
 				e.target.style.boxShadow =  `none`;
 				e.target.style.color = randomColor;
+
+				myWorks.style.textDecoration = 'underline';
 
 				language.style.backgroundColor = '#000';
 				language.style.boxShadow =  `none`;
@@ -126,11 +133,10 @@ macintosh.onclick = () =>{
 	audioSting.pause();
 	audioMac.play();
 }
-//
 
 leon.style.cursor = 'pointer'
 leon.onclick = () =>{
-	window.open('https://www.google.ru/search?q=leon+1994&newwindow=1&sxsrf=ALeKk01g_QbGhDIWXRdy9mZfdiHGRZY7Cw%3A1629389533675&source=hp&ei=3YIeYcrtJr_L1sQPvfeZqAs&iflsig=AINFCbYAAAAAYR6Q7Z2uJLdX_kS5ZI_zBrY3Bm-iD6Tk&gs_ssp=eJzj4tDP1TcwKTRNN2D04sxJzc9TMLS0NAEAPXQFeA&oq=leon+1994&gs_lcp=Cgdnd3Mtd2l6EAEYADIICC4QgAQQkwIyBQgAEMsBMgUIABDLATIFCAAQgAQyBQgAEMsBMgUIABDLATIFCAAQgAQyBQgAEIAEMgUIABDLATIFCAAQgAQ6BQguEMsBUJUKWLwsYKlhaABwAHgCgAHHKIgBwYgBkgEDOS00mAEAoAEB&sclient=gws-wiz','_blank');
+	window.open('https://www.google.ru/search?q=leon+1994&newwindow=1&sxsrf=ALeKk03z_3bQCXl3mF7yZT__Zd9JxBz8VQ%3A1629633518645&ei=7jsiYYvPJsmIxc8P45mFgAg&gs_ssp=eJzj4tDP1TcwKTRNN2D04sxJzc9TMLS0NAEAPXQFeA&oq=leon+&gs_lcp=Cgdnd3Mtd2l6EAEYADIHCC4QJxCTAjIFCAAQkQIyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLAToGCCMQJxATOgQIIxAnOgUIABCABDoLCC4QgAQQxwEQowI6BQguEIAEOggILhCABBCTAjoLCC4QgAQQxwEQ0QM6CgguEOoCECcQkwI6BwguEOoCECc6BwgjEOoCECc6BAguECc6BQguEJECOgQILhBDOgQIABBDOgoILhDHARDRAxBDOgoIABCABBCHAhAUSgQIQRgAUJoZWPQtYIw6aAJwAngAgAHYA4gBohKSAQkwLjEuNC4xLjKYAQCgAQGwAQrAAQE&sclient=gws-wiz','_blank');
 	audioSting.volume = 0.1;
 	audioMac.pause();
 	audioSting.play();
@@ -164,7 +170,6 @@ function teleportToUp(){
 toUp.addEventListener('click', teleportToUp);
 
 //translate
-const myWorks = document.querySelector('.myWorks');
 const someProjects = document.querySelector('.someProjects');
 
 

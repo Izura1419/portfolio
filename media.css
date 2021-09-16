@@ -1,0 +1,99 @@
+/*adaptation*/
+@media (max-width: 1030px) {
+	.menu{
+		width:  50%;
+	}
+
+	.part1, .part2{
+		margin: 150px 60px;
+	}
+	.wowItsMyPhoto:hover .part1, .wowItsMyPhoto:hover .part2{
+		margin: 120px 120px;
+	}
+	.wowItsMyPhoto:hover .part2{
+		margin: 180px 150px;
+	}
+
+	.sliders{
+		margin: 50px 0 180px 50px;
+	}
+	.firstValueSlider{
+		display: none;
+	}
+	.lastValueSlider{
+		display: none;
+	}
+	.nameOfSkill{
+		width: 30%;
+
+		position: absolute;
+		top: 0%;
+		left: 110%;
+	}
+	.percentageOfStudy{
+		position: absolute;
+		top: 0%;
+		left: 140%;
+	}
+	.josukeWithLap{
+		position: absolute;
+		margin: -45% 0 0 70%;
+	}
+
+	.aristotle{
+		margin: -55% auto 0;
+	}
+}
+@media (max-width: 950px) {
+	.part1, .part2{
+		margin: 150px 20px;
+	}
+	.wowItsMyPhoto:hover .part1, .wowItsMyPhoto:hover .part2{
+		margin: 120px 80px;
+	}
+	.wowItsMyPhoto:hover .part2{
+		margin: 180px 110px;
+	}
+}
+@media (max-width: 850px) {
+	.menu{
+		width:  60%;
+	}
+
+	.part1, .part2{
+		margin: 150px 5px;
+	}
+	.wowItsMyPhoto:hover .part1, .wowItsMyPhoto:hover .part2{
+		margin: 120px 65px;
+	}
+	.wowItsMyPhoto:hover .part2{
+		margin: 180px 95px;
+	}
+	.descriptionOfMe{
+		margin: 250px 0 0 10px;
+	}
+
+	.sliders{
+		margin: 50px 0 180px 25px;
+	}
+	.nameOfSkill{
+		width: 30%;
+
+		position: absolute;
+		top: 0%;
+		left: 110%;
+	}
+	.percentageOfStudy{
+		position: absolute;
+		top: 0%;
+		left: 145%;
+	}
+	.josukeWithLap{
+		position: absolute;
+		margin: -55% 0 0 70%;
+	}
+
+	.aristotle{
+		margin: -65% auto 0;
+	}
+}

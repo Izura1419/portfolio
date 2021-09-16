@@ -18,12 +18,17 @@ let dakrRandomColor = `rgb(${randomNumOne - 200},${randomNumTwo - 200},${randomN
 const header = document.querySelector('header');
 const language = document.querySelector('.language');
 
+//
+const contacts = document.querySelector('.contacts');
+
 //if hover on this elem the value is assigned
 	header.onmouseover = (e) =>{
 		if (e.target.parentNode.localName == "div") {
 				e.target.style.backgroundColor = randomColor;
 				e.target.style.boxShadow =  `inset 2px 2px 5px ${lightRandomColor}, inset -2px -2px 5px ${dakrRandomColor}`;
 				e.target.style.color = '#000';
+
+				e.target.style.textDecoration = 'none';
 			}
 		if (e.target.classList[0] == "language") {
 				language.style.backgroundColor = randomColor;
@@ -38,12 +43,14 @@ const language = document.querySelector('.language');
 				e.target.style.boxShadow =  `none`;
 				e.target.style.color = randomColor;
 
+				contacts.style.textDecoration = 'underline';
+
 				language.style.backgroundColor = '#000';
 				language.style.boxShadow =  `none`;
 				language.style.color = randomColor;
 	
 	}
-//change div's color
+//receiving my data
 const writeVk = document.querySelector('.writeVk'); 
 const writeMail = document.querySelector('.writeMail');
 
@@ -56,7 +63,7 @@ const mail = document.querySelector('.mail');
 mail.onclick = () => {
 	prompt('', 'uchihaizura1219@gmail.com');
 }
-
+//changing my data's color
 vk.style.color = randomColor;
 mail.style.color = randomColor;
 
@@ -85,7 +92,6 @@ const myWorks = document.querySelector('.myWorks');
 			window.location.href ='../page_my_works/index.html';
 		}
 //translate
-const contacts = document.querySelector('.contacts');
 
 language.onclick = () =>{
 	if (language.textContent == 'EN') {

@@ -21,6 +21,9 @@ let positionY = 300;
 //change menu's background color and shadow
 const header = document.querySelector('header');
 
+//
+const whoAmI = document.querySelector('.whoAmI');
+
 const changeBGCMenu = () => {
 	//if hover on this elem the value is assigned
 	header.onmouseover = (e) =>{
@@ -29,6 +32,8 @@ const changeBGCMenu = () => {
 				e.target.style.backgroundColor = middleColor;
 				e.target.style.boxShadow =  `inset 2px 2px 5px ${colorCircle}, inset -2px -2px 5px ${firstColor}`;
 				e.target.style.color = '#000';
+
+				e.target.style.textDecoration = 'none';
 			}
 		if (e.target.classList[0] == "language") {
 
@@ -44,14 +49,17 @@ const changeBGCMenu = () => {
 				e.target.style.boxShadow =  `none`;
 				e.target.style.color = middleColor;
 
+				whoAmI.style.textDecoration = 'underline';
+
 				language.style.backgroundColor = '#000';
 				language.style.boxShadow =  `none`;
 				language.style.color = middleColor;
 	
 	}
 }
-//interval
-
+//!interval
+//make positionXVP (Vlad Prikhodko) for adaptation
+let positionXVP = 500;
 //its for control position all construction
 let sumPosY = 0;
 
@@ -71,7 +79,7 @@ let showCircles = setInterval(() => {
 	ctx.fill();
 //change position and her control 
 	sumPosY += positionY;
-
+	console.log(positionX);
 	positionX += 30;
 //draw name
 	let minusOrPlus = random(0,1);
@@ -80,14 +88,14 @@ let showCircles = setInterval(() => {
 
 		ctx.font = "48px consolas";
 		ctx.fillStyle = colorCircle;
-	  	ctx.fillText("Vladislav Prikhodko", 500, positionY - 50);
+	  	ctx.fillText("Vladislav Prikhodko", positionXVP, positionY - 50);
 	}
 	else{
 		positionY += 30;
 
 		ctx.font = "48px consolas";
 		ctx.fillStyle = colorCircle;
-	  	ctx.fillText("Vladislav Prikhodko", 500, positionY + 50);
+	  	ctx.fillText("Vladislav Prikhodko", positionXVP, positionY + 50);
 	}
 //opacity
 	ctx.globalAlpha += 0.1;
@@ -179,7 +187,7 @@ let getSum = () =>{
 	sumValuesInputs = 0;
 
 	for (let numBlock = 1; numBlock <= 5; numBlock++) {
-		let inputFromDOM = document.querySelector(`.slidersAndPic :nth-child(${numBlock}) input`);
+		let inputFromDOM = document.querySelector(`.sliders :nth-child(${numBlock}) input`);
 		
 		sumValuesInputs += +inputFromDOM.value;
 	}
@@ -195,7 +203,7 @@ document.addEventListener('mousemove', (e) => {
 			josukeWithLap.style.transform = `scale(${sumValuesInputs / 400})`;
 	}
 })
-//! 3D model from three.js
+//! 3D model from three.js and him rotation
 // timeout for load middleColor
 setTimeout(() => {
 	const canvasAristotle = document.querySelector('.aristotle');
@@ -251,7 +259,7 @@ ScrollTrigger.create({
 })
 //sliders and josuke
 const tl1 = gsap.timeline();
-tl1.from('.slidersAndPic', {xPercent: -300, opacity: -5})
+tl1.from('.sliders', {xPercent: -300, opacity: -5})
   .from('.mySkills', {yPercent: 200, opacity: -5})
   .from('.josukeWithLap', {xPercent: 100, opacity: -5});
 
@@ -270,7 +278,7 @@ tl2.from('.fullDescription', {opacity: -5})
 
 ScrollTrigger.create({
 	animation: tl2,
-	trigger: '.slidersAndPic',
+	trigger: '.sliders',
 	start: 'top top',
 	end: '+=100',
 	scrub: true,
@@ -313,8 +321,6 @@ toUp.addEventListener('click', teleportToUp);
 
 //!translare site
 const language = document.querySelector('.language');
-
-const whoAmI = document.querySelector('.whoAmI');
 //trip to page
 const myWorks = document.querySelector('.myWorks');
 	myWorks.onclick = () => {
@@ -370,10 +376,10 @@ language.onclick = () =>{
 		ctxFD.fillText("hover over", 190, 200);
 	}
 }
-//!musik
+//!music
 const audioQueen = new Audio('music/Queen_-_Bohemian_Rhapsody.mp3');
 
 body.onclick = () =>{
 	audioQueen.volume = 0.1;
-	audioQueen.play();
+	//audioQueen.play();
 }

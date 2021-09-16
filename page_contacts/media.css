@@ -1,0 +1,171 @@
+@media (max-width: 1030px) {
+	.menu{
+		width:  50%;
+	}
+
+	.containerVk, .containerMail{
+		width: 15%;
+	}
+
+	.gifGB{
+		margin: 115px auto;
+	}
+}
+@media (max-width: 850px) {
+	.menu{
+		width: 60%;
+	}
+}
+@media (max-width: 700px) {
+	.menu{
+		width: 65%;
+	}
+
+	.containerVk, .containerMail{
+		width: 100%;
+		text-align: center ;
+	}
+	.containerVk{
+	margin: 15% auto;
+	}
+	.containerMail{
+		margin: 65% auto;
+	}
+
+	.gifGB{
+		width: 50%;
+		margin: 165px auto;
+	}
+}
+@media (max-width: 655px) {
+	.menu{
+		width: 70%;
+		font-size: 1.2em;
+	}
+	.language{
+		font-size: 1.2em;
+	}
+
+	.containerVk, .containerMail{
+		width: 100%;
+		text-align: center ;
+	}
+	.containerVk{
+		margin: 15% auto;
+	}
+	.containerMail{
+		margin: 65% auto;
+	}
+
+	.gifGB{
+		width: 50%;
+		margin: 165px auto;
+	}
+}
+@media (max-width: 560px) {
+	.containerVk{
+		margin: 20% auto;
+	}
+	.containerMail{
+		margin: 80% auto;
+	}
+}
+@media (max-width: 515px) {
+	.menu{
+		width: 75%;
+	}
+}
+@media (max-width: 480px) {
+	.menuAdap{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		position: absolute;
+		top: 20px;
+		left: 40px;
+
+		width: 50px;
+		height: 50px;
+
+		background-color: black;
+
+		z-index: 5 ;
+
+		cursor: pointer;
+
+		transition: all .5s ease;
+	}
+	.strip{
+		width: 40px;
+		height: 10px;
+
+		margin-bottom: 10px;
+
+		background-color: #fff;
+
+		transition: all .5s ease;
+
+		animation: rotationStrip 5s ease infinite;
+	}
+	@keyframes rotationStrip{
+		from{
+			transform: rotate(0deg) ;
+		}
+		60%{
+			transform: rotate(180deg) ;
+		}
+	}
+	.menuAdap:hover .strip{
+		margin-bottom: 5px;
+	}
+	.menuAdap :nth-child(1){
+		margin-top: 10px;
+	}
+	.cross{
+		z-index: 6;
+	}
+}
+@media (max-width: 410px) {
+	.containerVk{
+		margin: 25% auto;
+	}
+	.containerMail{
+		margin: 95% auto;
+	}
+
+	.gifGB{
+		width: 70%;
+		margin: 170px auto;
+	}
+}
+@media (max-width: 380px) {
+	.containerVk{
+		margin: 25% auto;
+	}
+	.containerMail{
+		margin: 95% auto;
+	}
+
+	.gifGB{
+		width: 70%;
+		margin: 150px auto;
+	}
+
+	.menuAdap{
+		left: 20px;
+	}
+}
+@media (max-width: 335px) {
+	.containerVk{
+		margin: 35% auto;
+	}
+	.containerMail{
+		margin: 105% auto;
+	}
+
+	.gifGB{
+		width: 70%;
+		margin: 170px auto;
+	}
+}
