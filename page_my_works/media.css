@@ -32,7 +32,8 @@
 
 	.someProjects{
 		width: 90%;
-		margin: 65% 5%;
+		margin: 0 5%;
+		top:  105%;
 	}
 
 	.description{
@@ -50,20 +51,20 @@
 
 	.someProjects{
 		width: 100%;
-		margin: 70% 0%;
+		margin: 0 0%;
 	}
 
 	.description{
 		margin: 50px 10px 0 10px;
 	}
 }
-@media (max-width: 850px) {
+@media (max-width: 880px) {
 	.menu{
 		width:  60%;
 	}
 
 	.headingText{
-		width: 90%;
+		width: 80%;
 	}
 
 	.yourName{
@@ -74,8 +75,9 @@
 	}
 
 	.someProjects{
-		width: 70%;
-		margin: 75% 20%;
+		width: 60%;
+		margin: 0 20%;
+		top:  100%;
 	}
 
 	.description{
@@ -83,5 +85,201 @@
 
 		margin: 0px -100px 50px 50%;
 		transform: translate(-50%, 0);
+	}
+}
+@media (max-width: 835px){
+	.headingText{
+		width: 85%;
+	}
+}
+@media (max-width: 810px){
+	.someProjects{
+		width: 70%;
+	}
+	.yourName{
+		width: 110%;
+	}
+}
+@media (max-width: 790px){
+	.headingText{
+		width: 90%;
+	}
+}
+@media (max-width: 755px){
+	.someProjects{
+		margin: 0 15% ;
+	}
+}
+@media (max-width: 745px){
+	.headingText{
+		width: 50%;
+	}
+}
+@media (max-width: 710px){
+	.yourName{
+		width: 145%;
+		height: 600px;
+
+		transform: translate(-10%, 0) ;
+	}
+
+	.someProjects{
+		top:  110%;
+	}
+
+	.underDivMan{
+		width: 300px;
+		margin: 40% 60%;
+	}
+	@keyframes shuffling {
+		from{
+			margin: 50% 0;
+			z-index: 3 ;
+		}
+		50%{
+			margin: 15% 0;
+
+			z-index: 1 ;
+		}
+		to{
+			margin: 50% 0 ;
+			z-index: 3 ;
+		}
+	}
+}
+@media (max-width: 705px){
+	.menu{
+		width:  70%;
+	}
+}
+@media (max-width: 670px){
+	.headingText{
+		width: 60%;
+	}
+}
+@media (max-width: 640px){
+	.yourName{
+		width: 160%;
+	}
+}
+@media (max-width: 605px){
+	.menu{
+		font-size: 1.3em;
+	}
+	.language{
+		font-size: 1.3em;
+	}
+}
+@media (max-width: 580px){
+	.yourName{
+		width: 175%;
+		transform: translate(-15%, 0) ;
+	}
+}
+@media (max-width: 555px){
+	.headingText{
+		width: 70%;
+	}
+
+	.toUp{
+		left: 85%;
+	}
+}
+@media (max-width: 645px){
+	.menu{
+		width:  80%;
+	}
+}
+@media (max-width: 515px){
+	.yourName{
+		width: 185%;
+		transform: translate(-20%, 0) ;
+	}
+
+	.underDivMan{
+		width: 300px;
+		margin: 50% 60%;
+	}
+	@keyframes shuffling {
+		from{
+			margin: 60% 0;
+			z-index: 3 ;
+		}
+		50%{
+			margin: 25% 0;
+
+			z-index: 1 ;
+		}
+		to{
+			margin: 60% 0 ;
+			z-index: 3 ;
+		}
+	}
+}
+@media (max-width: 480px){
+	.headingText{
+		width: 80%;
+	}
+
+	.yourName{
+		width: 205%;
+		transform: translate(-25%, 0) ;
+	}
+
+	.menuAdap{
+		display: flex;
+	}
+}
+@media (max-width: 440px){
+	.yourName{
+		width: 215%;
+		transform: translate(-25%, 0) ;
+	}
+}
+@media (max-width: 425px){
+	.headingText{
+		width: 80%;
+	}
+
+	.someProjects{
+		width: 95%;
+		margin: 0 5% ;
+	}
+
+	.yourName{
+		width: 245%;
+		transform: translate(-30%, 0) ;
+	}
+
+	.underDivMan{
+		display: none;
+	}
+}
+@media (max-width: 400px){
+	.yourName{
+		width: 265%;
+		transform: translate(-35%, 0) ;
+	}
+
+	@keyframes shuffling {
+		from{
+			margin: 75% 0;
+			z-index: 3 ;
+		}
+		50%{
+			margin: 40% 0;
+
+			z-index: 1 ;
+		}
+		to{
+			margin: 75% 0 ;
+			z-index: 3 ;
+		}
+	}
+}
+@media (max-width: 340px){
+	.yourName{
+		width: 285%;
+		transform: translate(-40%, 0) ;
 	}
 }

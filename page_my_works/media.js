@@ -1,62 +1,262 @@
-if (window.matchMedia("(max-width: 850px)").matches) {
-language.onclick = () =>{
-	if (language.textContent == 'EN') {
-		language.textContent = 'RU';
+//heading text adaptation 
+if (window.matchMedia("(max-width: 880px)").matches) {
+	language.onclick = () =>{
+		if (language.textContent == 'EN') {
+			changingLanToRu();
 
-		whoAmI.textContent = 'Кто я?';
-		myWorks.textContent = 'Мои работы';
-		contacts.textContent = 'Контакты';
-
-		headingText.style.width = '95%';
-
-		findWorks.textContent = 'Вы можете найти мои работы на моём';
-
-		someProjects.textContent = 'Вот некоторые проекты из моего портфолио';
-
-		for (let i = 7; i <= 11; i++) {
-			let title = document.querySelector(`body :nth-child(${i}) .title`);
-			const titlesRU = ['Вейпорвейв','Мозаика','Матильда Ландо','Случайный мир','Игра про пожарного'];
-
-			title.textContent = titlesRU[i - 7];
-
-			let description = document.querySelector(`body :nth-child(${i}) .description`);	
-			const descriptionsRU = ['Во время изучения библиотеки Javascript Three.js, я слушал песню リサフランク420 / 現代のコンピュー MACINTOSH PLUS и вдохновился культурой вейпорвейва. Вот что из этого вышло.',
-			'Когда изучал canvas, подумал : "А почему бы не сделать сайт, который сам собирает фотографию по кусочкам?". Сказано - сделано. ',
-			'После просмотра фильма Леон(1994) я вдохновился и создал необычный сайт с опорой на дизайн.',
-			'В этом сайте ничего нельзя предугадать. Случайная цифра или буква, случайного цвета и размера появляется в случайном месте в случайное время.',
-			'Моя первая полноценная веб-игра, в которой вы - пожарный и должны спасти горящую деревню. Нажмите на дом, затем, если увидите огонь - на пробел. И не смейте сбивать яблоки.'];
-
-			description.textContent = descriptionsRU[i - 7];
+			headingText.style.width = '85%';
 		}
-	}
-	else{
-		language.textContent = 'EN';
+		else{
+			changingLanToEn();
 
-		whoAmI.textContent = 'Who am I?';
-		myWorks.textContent = 'My works';
-		contacts.textContent = 'Contacts';
-
-		headingText.style.width = '90%';
-
-		findWorks.textContent = 'You can find all my works on my';
-
-		someProjects.textContent = 'Here are some projects from my portfolio'; 
-
-		for (let i = 7; i <= 11; i++) {
-			let title = document.querySelector(`body :nth-child(${i}) .title`);
-			const titlesEN = ['Vaporwave','Jigsaw','Mathilda Lando','Random world','Game about Fireman'];
-
-			title.textContent = titlesEN[i - 7];
-
-			let description = document.querySelector(`body :nth-child(${i}) .description`);	
-			const descriptionsEN = ['While studying the Javascript library Three.js, I was listening to the song リフフランンク420 /ののコンピュー MACINTOSH PLUS and was inspired by the culture of V a p o r w a v e. Heres what came out of it.',
-			'When I was studying canvas, I thought : "Why not make a website that collects the photo itself in pieces?". Said and done.',
-			'After watching the movie Leon (1994), I was inspired and created an unusual website based on design.',
-			'Nothing can be predicted on this site. A random number or letter of a random color and size appears in a random place at a random time.',
-			'My first full-fledged web game in which you are a firefighter and have to save a burning village. Click on the house, then, if you see a fire, click on the space bar. And dont you dare knock down the apples.'];
-
-			description.textContent = descriptionsEN[i - 7];
+			headingText.style.width = '80%';
 		}
 	}
 }
+if (window.matchMedia("(max-width: 850px)").matches) {
+	language.onclick = () =>{
+		if (language.textContent == 'EN') {
+			changingLanToRu();
+
+			headingText.style.width = '90%';
+		}
+		else{
+			changingLanToEn();
+
+			headingText.style.width = '80%';
+		}
+	}
+}
+if (window.matchMedia("(max-width: 800px)").matches) {
+	language.onclick = () =>{
+		if (language.textContent == 'EN') {
+			changingLanToRu();
+
+			headingText.style.width = '95%';
+		}
+		else{
+			changingLanToEn();
+
+			headingText.style.width = '90%';
+		}
+	}
+}
+if (window.matchMedia("(max-width: 755px)").matches) {
+	language.onclick = () =>{
+		if (language.textContent == 'EN') {
+			changingLanToRu();
+
+			headingText.style.width = '55%';
+		}
+		else{
+			changingLanToEn();
+
+			headingText.style.width = '50%';
+		}
+	}
+}
+if (window.matchMedia("(max-width: 670px)").matches) {
+	language.onclick = () =>{
+		if (language.textContent == 'EN') {
+			changingLanToRu();
+
+			headingText.style.width = '65%';
+		}
+		else{
+			changingLanToEn();
+
+			headingText.style.width = '60%';
+		}
+	}
+}
+if (window.matchMedia("(max-width: 555px)").matches) {
+	language.onclick = () =>{
+		if (language.textContent == 'EN') {
+			changingLanToRu();
+
+			headingText.style.width = '75%';
+		}
+		else{
+			changingLanToEn();
+
+			headingText.style.width = '70%';
+		}
+	}
+}
+if (window.matchMedia("(max-width: 485px)").matches) {
+	language.onclick = () =>{
+		if (language.textContent == 'EN') {
+			changingLanToRu();
+
+			headingText.style.width = '85%';
+		}
+		else{
+			changingLanToEn();
+
+			headingText.style.width = '80%';
+		}
+	}
+}
+// menu adaptation
+// adding the necessary variables
+const menu = document.querySelector('.menu');
+const menuAdap = document.querySelector('.menuAdap');
+const cross = document.querySelector('.cross');
+
+//at this width, objects are moved to another location
+//elements in menu adaptive
+let elInMenuAdap = [whoAmI,myWorks,contacts,language,cross];
+
+let clickOnMenuAdap = () => {
+	menuAdap.style.cursor = 'default';
+	whoAmI.style.marginTop = '50px';
+
+	for (let i = 2; i <= 14; i++) {
+		body.children[i].style.display = 'none';
+	}
+
+	for (let i = 0; i < 3; i++) {
+		menuAdap.children[i].style.display = 'none';
+	}
+
+	menuAdap.style.width = '400px';
+	menuAdap.style.height = '400px';
+	menuAdap.style.top = '100px';
+	menuAdap.style.left = '40px';
+
+	for (let i = 0; i <= 4; i++) {
+		menuAdap.appendChild(elInMenuAdap[i]);
+
+		gsap.to(elInMenuAdap[i],{fontSize : '1.5em',
+			cursor : 'pointer',
+			marginBottom : '20px',
+			transition : 'all .5s ease',
+			padding : '10px',
+			borderRadius : '30px'
+		});
+
+		elInMenuAdap[i].onmouseover = (e) =>{
+			e.target.style.backgroundColor = randomColor;
+			e.target.style.boxShadow =  `inset 2px 2px 5px ${lightRandomColor}, inset -2px -2px 5px ${dakrRandomColor}`;
+			e.target.style.color = '#000';
+
+			e.target.style.textDecoration = 'none';
+		}
+
+		elInMenuAdap[i].onmouseout = (e) =>{
+			e.target.style.backgroundColor = '#000';
+			e.target.style.boxShadow =  `none`;
+			e.target.style.color = '#fff';
+
+			myWorks.style.textDecoration = 'underline';
+		}
+
+		if (i == 4) {
+			gsap.to(cross,{display : 'inline-block',
+			backgroundColor : '#000',
+			padding : '0px'
+		});
+		}
+	}
+}
+
+if (window.matchMedia("(max-width: 480px)").matches) {
+	menu.style.display = 'none';
+
+	menuAdap.onclick = () =>{
+		clickOnMenuAdap();
+	}
+}
+//closing menu adap
+let clickOnCross = () => {
+	event.stopPropagation();
+
+	menuAdap.style.cursor = 'pointer';
+
+	menuAdap.style.width = '50px';
+	menuAdap.style.height = '60px';
+	menuAdap.style.top = '20px';
+	menuAdap.style.left = '40px';
+
+	for (let i = 2; i <= 14; i++) {
+		body.children[i].style.display = 'inline-block';
+	}
+
+	for (let i = 0; i < 3; i++) {
+		menuAdap.children[i].style.display = 'inline-block';
+	}
+	for (let i = 0; i <= 2; i++) {
+		menu.appendChild(elInMenuAdap[i]);
+	}
+
+	document.querySelector('header').appendChild(language);
+	cross.style.display = 'none';	
+}
+
+cross.onclick = () =>{
+	clickOnCross();
+}
+
+
+
+if (window.matchMedia("(max-width: 450px)").matches) {
+	menuAdap.onclick = () =>{
+		clickOnMenuAdap();
+		menuAdap.style.top = '70px';
+		menuAdap.style.left = '20px';
+	}
+	cross.onclick = () =>{
+		clickOnCross();
+	}
+}
+
+if (window.matchMedia("(max-width: 430px)").matches) {
+	menuAdap.onclick = () =>{
+		clickOnMenuAdap();
+
+		menuAdap.style.left = '0px';
+	}
+	cross.onclick = () =>{
+		clickOnCross();
+	}
+}
+
+
+if (window.matchMedia("(max-width: 380px)").matches) {
+	menuAdap.onclick = () =>{
+		clickOnMenuAdap();
+
+		menuAdap.style.width = '300px';
+	}
+	cross.onclick = () =>{
+		clickOnCross();
+	}
+}
+
+
+if (window.matchMedia("(max-width: 335px)").matches) {
+	menuAdap.onclick = () =>{
+		clickOnMenuAdap();
+
+		menuAdap.style.width = '350px';
+		menuAdap.style.height = '400px';
+		menuAdap.style.top = '70px';
+		menuAdap.style.left = '0px';
+	}
+	cross.onclick = () =>{
+		clickOnCross();
+	}
+}
+if (window.matchMedia("(max-width: 310px)").matches) {
+	menuAdap.onclick = () =>{
+		clickOnMenuAdap();
+
+		menuAdap.style.width = '300px';
+		menuAdap.style.height = '400px';
+		menuAdap.style.top = '70px';
+		menuAdap.style.left = '0px';
+	}
+	cross.onclick = () =>{
+		clickOnCross();
+	}
 }
