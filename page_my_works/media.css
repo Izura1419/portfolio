@@ -5,7 +5,11 @@
 
 	.yourName{
 		width: 100%;
-		height: 500px
+		height: 500px;
+
+		margin-left: -15%;
+
+		background-size: cover;
 	}
 	.headingText{
 		width: 70%;
@@ -66,10 +70,6 @@
 	.headingText{
 		width: 80%;
 	}
-
-	.yourName{
-		width: 105%;
-	}
 	.underDivMan{
 		margin: 35% 54%;
 	}
@@ -96,9 +96,7 @@
 	.someProjects{
 		width: 70%;
 	}
-	.yourName{
-		width: 110%;
-	}
+
 }
 @media (max-width: 790px){
 	.headingText{
@@ -116,12 +114,7 @@
 	}
 }
 @media (max-width: 710px){
-	.yourName{
-		width: 145%;
-		height: 600px;
 
-		transform: translate(-10%, 0) ;
-	}
 
 	.someProjects{
 		top:  110%;
@@ -158,9 +151,7 @@
 	}
 }
 @media (max-width: 640px){
-	.yourName{
-		width: 160%;
-	}
+
 }
 @media (max-width: 605px){
 	.menu{
@@ -171,10 +162,7 @@
 	}
 }
 @media (max-width: 580px){
-	.yourName{
-		width: 175%;
-		transform: translate(-15%, 0) ;
-	}
+
 }
 @media (max-width: 555px){
 	.headingText{
@@ -182,7 +170,7 @@
 	}
 
 	.toUp{
-		left: 85%;
+		left: 45%;
 	}
 }
 @media (max-width: 645px){
@@ -191,10 +179,7 @@
 	}
 }
 @media (max-width: 515px){
-	.yourName{
-		width: 185%;
-		transform: translate(-20%, 0) ;
-	}
+
 
 	.underDivMan{
 		width: 300px;
@@ -220,20 +205,8 @@
 	.headingText{
 		width: 80%;
 	}
-
-	.yourName{
-		width: 205%;
-		transform: translate(-25%, 0) ;
-	}
-
 	.menuAdap{
 		display: flex;
-	}
-}
-@media (max-width: 440px){
-	.yourName{
-		width: 215%;
-		transform: translate(-25%, 0) ;
 	}
 }
 @media (max-width: 425px){
@@ -257,8 +230,12 @@
 }
 @media (max-width: 400px){
 	.yourName{
-		width: 265%;
-		transform: translate(-35%, 0) ;
+		padding: 10% ;
+	}
+
+	.underDiv img{
+		margin: 75% 0;
+		width: 200px;
 	}
 
 	@keyframes shuffling {
@@ -277,9 +254,12 @@
 		}
 	}
 }
-@media (max-width: 340px){
-	.yourName{
-		width: 285%;
-		transform: translate(-40%, 0) ;
+@media (max-width: 345px){
+	.someProjects{
+		width: 95%;
+		margin: 20% 5% ;
+	}
+	.illustration{
+		width: 300px;
 	}
 }

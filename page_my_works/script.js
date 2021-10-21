@@ -75,7 +75,7 @@ const contacts = document.querySelector('.contacts');
 
 	let numForClick = 0;
 
-	yourName.style.clipPath = 'circle(80% at 50% 50%)';
+	yourName.style.clipPath = 'circle(40% at center)';
 
 	findWorks.onmouseover = () => {
 			yourName.style.clipPath = 'circle(25% at 70% 60%)';
@@ -89,21 +89,21 @@ const contacts = document.querySelector('.contacts');
 					}
 				else{
 					findWorks.onmouseout = () => {
-							yourName.style.clipPath = 'circle(80% at 50% 50%)';
+							yourName.style.clipPath = 'circle(40% at center)';
 						}
 						numForClick--;
 				}
 			}
 		}
 		findWorks.onmouseout = () => {
-				yourName.style.clipPath = 'circle(80% at 50% 50%)';
+				yourName.style.clipPath = 'circle(40% at center)';
 		}
 
 	gh.onmouseover = () => {
 			yourName.style.clipPath = 'circle(10% at 40% 35%)';
 
 		gh.onmouseout = () => {
-			yourName.style.clipPath = 'circle(80% at 50% 50%)';
+			yourName.style.clipPath = 'circle(40% at center)';
 		}
 	}
 //changing images, shuffling 
