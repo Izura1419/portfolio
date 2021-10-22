@@ -170,7 +170,8 @@
 	}
 
 	.toUp{
-		left: 45%;
+		left: 50%;
+		top: 90%;
 	}
 }
 @media (max-width: 645px){
@@ -210,13 +211,19 @@
 	}
 }
 @media (max-width: 425px){
+	.firstTitle{
+		margin-top: 10%;
+	}
+	.illustration{
+		width: 300px;
+	}
 	.headingText{
 		width: 80%;
 	}
 
 	.someProjects{
 		width: 95%;
-		margin: 0 5% ;
+		margin: 5% 5% ;
 	}
 
 	.yourName{
@@ -258,8 +265,5 @@
 	.someProjects{
 		width: 95%;
 		margin: 20% 5% ;
-	}
-	.illustration{
-		width: 300px;
 	}
 }

@@ -75,7 +75,7 @@ const contacts = document.querySelector('.contacts');
 
 	let numForClick = 0;
 
-	yourName.style.clipPath = 'circle(40% at center)';
+	yourName.style.clipPath = 'circle(100% at center)';
 
 	findWorks.onmouseover = () => {
 			yourName.style.clipPath = 'circle(25% at 70% 60%)';
@@ -89,21 +89,21 @@ const contacts = document.querySelector('.contacts');
 					}
 				else{
 					findWorks.onmouseout = () => {
-							yourName.style.clipPath = 'circle(40% at center)';
+							yourName.style.clipPath = 'circle(80% at 50% 50%)';
 						}
 						numForClick--;
 				}
 			}
 		}
 		findWorks.onmouseout = () => {
-				yourName.style.clipPath = 'circle(40% at center)';
+				yourName.style.clipPath = 'circle(80% at 50% 50%)';
 		}
 
 	gh.onmouseover = () => {
 			yourName.style.clipPath = 'circle(10% at 40% 35%)';
 
 		gh.onmouseout = () => {
-			yourName.style.clipPath = 'circle(40% at center)';
+			yourName.style.clipPath = 'circle(80% at 50% 50%)';
 		}
 	}
 //changing images, shuffling 
@@ -189,7 +189,7 @@ let changingLanToRu = () =>{
 		let title = document.querySelector(`body :nth-child(${i}) .title`);
 		const titlesRU = ['Вейпорвейв','Мозаика','Матильда Ландо','Случайный мир','Игра про пожарного'];
 
-		title.textContent = titlesRU[i - 11];
+		title.textContent = titlesRU[i - 9];
 
 		let description = document.querySelector(`body :nth-child(${i}) .description`);	
 		const descriptionsRU = ['Во время изучения библиотеки Javascript Three.js, я слушал песню リサフランク420 / 現代のコンピュー MACINTOSH PLUS и вдохновился культурой вейпорвейва. Вот что из этого вышло.',
@@ -198,7 +198,7 @@ let changingLanToRu = () =>{
 		'В этом сайте ничего нельзя предугадать. Случайная цифра или буква, случайного цвета и размера появляется в случайном месте в случайное время.',
 		'Моя первая полноценная веб-игра, в которой вы - пожарный и должны спасти горящую деревню. Нажмите на дом, затем, если увидите огонь - на пробел. И не смейте сбивать яблоки.'];
 
-		description.textContent = descriptionsRU[i - 11];
+		description.textContent = descriptionsRU[i - 9];
 	}
 }
 
@@ -219,7 +219,7 @@ let changingLanToEn = () => {
 		let title = document.querySelector(`body :nth-child(${i}) .title`);
 		const titlesEN = ['Vaporwave','Jigsaw','Mathilda Lando','Random world','Game about Fireman'];
 
-		title.textContent = titlesEN[i - 11];
+		title.textContent = titlesEN[i - 9];
 
 		let description = document.querySelector(`body :nth-child(${i}) .description`);	
 		const descriptionsEN = ['While studying the Javascript library Three.js, I was listening to the song リフフランンク420 /ののコンピュー MACINTOSH PLUS and was inspired by the culture of V a p o r w a v e. Heres what came out of it.',
@@ -228,7 +228,7 @@ let changingLanToEn = () => {
 		'Nothing can be predicted on this site. A random number or letter of a random color and size appears in a random place at a random time.',
 		'My first full-fledged web game in which you are a firefighter and have to save a burning village. Click on the house, then, if you see a fire, click on the space bar. And dont you dare knock down the apples.'];
 
-		description.textContent = descriptionsEN[i - 11];
+		description.textContent = descriptionsEN[i - 9];
 	}
 }
 

@@ -1,3 +1,37 @@
+//your name adaptation 
+if (window.matchMedia("(max-width: 480px)").matches) {
+	yourName.style.clipPath = 'circle(40% at center)';
+
+	findWorks.onmouseover = () => {
+			yourName.style.clipPath = 'circle(25% at 70% 60%)';
+
+		findWorks.onclick = () => {
+				if (numForClick == 0) {
+						findWorks.onmouseout = () => {
+							yourName.style.clipPath = 'circle(25% at 70% 60%)';
+						}
+						numForClick++;
+					}
+				else{
+					findWorks.onmouseout = () => {
+							yourName.style.clipPath = 'circle(40% at center)';
+						}
+						numForClick--;
+				}
+			}
+		}
+		findWorks.onmouseout = () => {
+				yourName.style.clipPath = 'circle(40% at center)';
+		}
+
+	gh.onmouseover = () => {
+			yourName.style.clipPath = 'circle(10% at 40% 35%)';
+
+		gh.onmouseout = () => {
+			yourName.style.clipPath = 'circle(40% at center)';
+		}
+	}
+}
 //heading text adaptation 
 if (window.matchMedia("(max-width: 880px)").matches) {
 	language.onclick = () =>{
