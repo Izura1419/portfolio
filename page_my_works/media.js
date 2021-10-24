@@ -1,5 +1,12 @@
-//your name adaptation 
+//adaptation 
 if (window.matchMedia("(max-width: 480px)").matches) {
+	//disable scrolling x page
+	window.addEventListener('scroll', () => {
+		if (window.scrollX >= 0) {
+			this.scrollX = 0;
+		}
+	}); 
+	//animation your name
 	yourName.style.clipPath = 'circle(40% at center)';
 
 	findWorks.onmouseover = () => {
