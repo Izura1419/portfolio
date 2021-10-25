@@ -237,7 +237,9 @@
 	}
 
 	.underDivMan{
-		display: none;
+		display: inline-block;
+		width: 200px;
+		margin: 40% 20% ;
 	}
 }
 @media (max-width: 400px){
