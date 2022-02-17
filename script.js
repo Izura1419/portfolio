@@ -8,7 +8,7 @@ canvas.height = innerHeight - 100;
 ctx.globalAlpha = 0;
 //function random
 const random = (min,max) => {return Math.floor(Math.random() * (max - min + 1)) + min;}
-//materisals for interval 
+//materisals for interval
 //random nums for color
 let randomColorOne = random(0,155);
 let randomColorTwo = random(0,155);
@@ -28,7 +28,7 @@ const changeBGCMenu = () => {
 	//if hover on this elem the value is assigned
 	header.onmouseover = (e) =>{
 		if (e.target.parentNode.localName == "div") {
-			
+
 				e.target.style.backgroundColor = middleColor;
 				e.target.style.boxShadow =  `inset 2px 2px 5px ${colorCircle}, inset -2px -2px 5px ${firstColor}`;
 				e.target.style.color = '#000';
@@ -42,7 +42,7 @@ const changeBGCMenu = () => {
 				language.style.color = '#000';
 			}
 		}
-	//the value is being deleted	
+	//the value is being deleted
 	header.onmouseout = (e) =>{
 
 				e.target.style.backgroundColor = '#000';
@@ -54,7 +54,7 @@ const changeBGCMenu = () => {
 				language.style.backgroundColor = '#000';
 				language.style.boxShadow =  `none`;
 				language.style.color = middleColor;
-	
+
 	}
 }
 //!interval
@@ -72,12 +72,12 @@ let showCircles = setInterval(() => {
 	colorCircle = `rgb(${randomColorOne},${randomColorTwo},${randomColorThree})`;
 
 	ctx.beginPath();
-	ctx.fillStyle = colorCircle; 
-//get size circle 
+	ctx.fillStyle = colorCircle;
+//get size circle
 	let sizeCircle = random(10,50);
 	ctx.arc(positionX,positionY,sizeCircle,0,Math.PI*2,true);
 	ctx.fill();
-//change position and her control 
+//change position and her control
 	sumPosY += positionY;
 	console.log(positionX);
 	positionX += 30;
@@ -125,27 +125,21 @@ setTimeout(() => {
 
 //my age
 const myAge = document.querySelector('.myAge');
-//the function checks date and subtracts my age
-let checkMyAge = () => {
-	let year = new Date().getFullYear();
-	let month = new Date().getMonth() + 1;
-	let day = new Date().getDate();
 
-	let myBirthday = Date.parse(3-12-year);
+let now = new Date().getTime();
+let brthd = new Date(2005,11,3).getTime();
 
-	if (myBirthday <= Date.parse(day-month-year)) {
-		myAge.textContent = year - 2005;
-	}	
-}
-checkMyAge();
+let years = new Date(now - brthd);
 
-//!canvas field for drawing 
+myAge.textContent = Math.abs(years.getUTCFullYear() - 1970);
+
+//!canvas field for drawing
 const canvasFD = document.querySelector('.fieldForDrawing');
 const ctxFD = canvasFD.getContext('2d');
 //canvasFD size
 canvasFD.width = 500;
 canvasFD.height = 400;
-//text on canvasFD 
+//text on canvasFD
 	ctxFD.font = "24px consolas";
 	ctxFD.fillStyle = '#fff';
 	ctxFD.fillText("hover over", 190, 200);
@@ -164,16 +158,16 @@ canvasFD.onmousemove = (event) => {
 	randomColorTwo -= .5;
 	randomColorThree -= .5;
 
-	let colorCirclesFD = `rgb(${randomColorOne},${randomColorTwo},${randomColorThree})`; 
+	let colorCirclesFD = `rgb(${randomColorOne},${randomColorTwo},${randomColorThree})`;
 	//draw circles
 	ctxFD.beginPath();
 	ctxFD.fillStyle = colorCirclesFD;
 	ctxFD.arc(positionCursorX,positionCursorY,10,0,Math.PI*2,true);
 	ctxFD.fill();
 }
-//!sliders 
+//!sliders
 
-//i have several sliders and when you pull them, 
+//i have several sliders and when you pull them,
 //the value of the neighboring block changes to the value of the slider.
 
 //changing the pic size with the slider
@@ -188,7 +182,7 @@ let getSum = () =>{
 
 	for (let numBlock = 1; numBlock <= 5; numBlock++) {
 		let inputFromDOM = document.querySelector(`.sliders :nth-child(${numBlock}) input`);
-		
+
 		sumValuesInputs += +inputFromDOM.value;
 	}
 }
@@ -206,9 +200,9 @@ document.addEventListener('mousemove', (e) => {
 //! 3D model from three.js and him rotation
 // timeout for load middleColor
 setTimeout(() => {
-	const canvasAristotle = document.querySelector('.aristotle');
+	const canvasZeus = document.querySelector('.zeus');
 
-	const renderer = new THREE.WebGLRenderer({canvas: canvasAristotle, alpha: true});
+	const renderer = new THREE.WebGLRenderer({canvas: canvasZeus, alpha: true});
   renderer.setSize( window.innerWidth - 150, window.innerHeight );
   document.body.appendChild( renderer.domElement );
 
@@ -217,21 +211,21 @@ setTimeout(() => {
 
   const scene = new THREE.Scene();
 
-  const light = new THREE.DirectionalLight(middleColor, 10);
+  const light = new THREE.DirectionalLight(middleColor, 8);
   light.position.set(-2, 0, 20);
   scene.add(light);
 
   const loader = new THREE.GLTFLoader();
 
-  loader.load( 'model/scene.gltf', function ( gltf ) {
-	  gltf.scene.position.set(0.8,-1.8,15.8);
-	  gltf.scene.scale.set(0.8,0.7,0.8);
+  loader.load( 'model/zeus/scene.gltf', function ( gltf ) {
+	  gltf.scene.position.set(0.5,-2.2,15.5);
+	  gltf.scene.scale.set(0.4,0.3,0.4);
 
 	  gltf.scene.rotation.y = 1.5;
 	  gltf.scene.rotation.x = 0.2;
 
 	  scene.add( gltf.scene );
-	  scene.fog = new THREE.FogExp2(colorCircle, .1, 1);
+	  scene.fog = new THREE.FogExp2(colorCircle, .05, .1);
 
 	  function render(time) {
 	    gltf.scene.rotation.y += 0.01;
@@ -296,7 +290,7 @@ ScrollTrigger.create({
 	scrub: true,
 	anticipatePin: 10
 })
-//! text magic 
+//! text magic
 const fonts = ['serif', 'sans-serif', 'cursive', 'system-ui', 'emoji', 'math', 'fangsong'];
 const fullDescription = document.querySelector('.fullDescription');
 
@@ -344,11 +338,11 @@ language.onclick = () =>{
 		myWorks.textContent = 'Мои работы';
 		contacts.textContent = 'Контакты';
 
-		descriptionOfMe.textContent = 'Я Владислав Приходько, 15-летний фронтенд разработчик из России';
+		descriptionOfMe.textContent = 'Я Владислав Приходько, 16-летний фронтенд разработчик из России';
 
 		mySkills.textContent = 'Мои навыки';
 
-		fullDescription.innerHTML = 'Я учусь самостоятельно, создаю сайты с 2019 года, освоил 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS и 65% CANVAS, позволяющий рисовать на поле выше. <br/> Я выполнил свой первый заказ на фрилансе и похвастался перед родителям. <br/> В 2021 году я собираюсь поступить в колледж, чтобы учиться на программиста.';
+		fullDescription.innerHTML = 'Я учусь самостоятельно, создаю сайты с 2019 года, освоил 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS и 65% CANVAS, позволяющего рисовать на поле выше. <br/> Я выполнил свой первый заказ на фрилансе и похвастался перед родителям. <br/> В 2021 году я поступил в колледж, чтобы продолжить учиться на программиста.';
 
 		responsibility.textContent = 'Я не несу ответственность за результаты ваших мечтаний или пропагандистские рисунки, изображённые в песочнице';
 		responsibility.style.width =  '90%';
@@ -363,11 +357,11 @@ language.onclick = () =>{
 		myWorks.textContent = 'My works';
 		contacts.textContent = 'Contacts';
 
-		descriptionOfMe.textContent = 'I'+'m Vladislav Prikhodko, a 15-y.o. frontend developer from Russia';
+		descriptionOfMe.textContent = 'I'+'m Vladislav Prikhodko, a 16-y.o. frontend developer from Russia';
 
 		mySkills.textContent = 'My skills';
 
-		fullDescription.innerHTML = 'I' + `'` + 'm studying independently, I have been making websites since 2019, I have mastered 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS and 65% CANVAS, which allows you to draw on the field. <br/> I completed my first order on freelance and bragged to my parents. <br/> In 2021, I' + 'm going to college to study as a programmer.';
+		fullDescription.innerHTML = 'I' + `'` + 'm studying independently, I have been making websites since 2019, I have mastered 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS and 65% CANVAS, which allows you to draw on the field. <br/> I completed my first order on freelance and bragged to my parents. <br/> In 2021, I entered college to continue my studies as a programmer.';
 
 		responsibility.textContent = 'I am not responsible for the results of your dreams or propaganda drawings depicted in the sandbox';
 		responsibility.style.width =  '80%';
@@ -381,5 +375,5 @@ const audioQueen = new Audio('music/Queen_-_Bohemian_Rhapsody.mp3');
 
 body.onclick = () =>{
 	audioQueen.volume = 0.1;
-	//audioQueen.play();
+	audioQueen.play();
 }

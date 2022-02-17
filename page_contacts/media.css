@@ -108,6 +108,24 @@
 
 		animation: rotationStrip 5s ease infinite;
 	}
+	.cross{
+		width: 30px;
+
+		margin-top: 30px;
+
+		text-align: center;
+
+		display: none;
+
+		color: #fff;
+
+		transform: scale(1.5);
+
+		cursor: pointer;
+	}
+	.cross:hover{
+		transform: scale(2.5);
+	}
 	@keyframes rotationStrip{
 		from{
 			transform: rotate(0deg) ;

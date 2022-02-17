@@ -1,11 +1,6 @@
-//adaptation 
+//adaptation
 if (window.matchMedia("(max-width: 480px)").matches) {
 	//disable scrolling x page
-	window.addEventListener('scroll', () => {
-		if (window.scrollX >= 0) {
-			this.scrollX = 0;
-		}
-	}); 
 	//animation your name
 	yourName.style.clipPath = 'circle(40% at center)';
 
@@ -39,7 +34,7 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 		}
 	}
 }
-//heading text adaptation 
+//heading text adaptation
 if (window.matchMedia("(max-width: 880px)").matches) {
 	language.onclick = () =>{
 		if (language.textContent == 'EN') {
@@ -231,7 +226,7 @@ let clickOnCross = () => {
 	}
 
 	document.querySelector('header').appendChild(language);
-	cross.style.display = 'none';	
+	cross.style.display = 'none';
 }
 
 cross.onclick = () =>{
