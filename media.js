@@ -8,7 +8,7 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
 if (window.matchMedia("(max-width: 640px)").matches) {
 	//about canvas show
 	canvas.width = innerWidth - 350;
-	canvas.height = innerHeight - 900;
+	canvas.height = innerHeight - 600;
 
 	positionX = 0;
 	positionXVP = -5;

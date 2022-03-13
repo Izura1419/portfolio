@@ -74,6 +74,9 @@
 	.sliders{
 		margin: 50px 0 180px 25px;
 	}
+	.slider{
+		pointer-events: none;
+	}
 	.nameOfSkill{
 		width: 30%;
 
@@ -91,13 +94,14 @@
 		margin: -30% 0 0 20%;
 	}
 	.fullDescription{
-			margin: 500px auto 400px ;
+	 	width: 90%;
+		margin: 500px auto 400px ;
 	}
 	.zeus{
 		margin: -185% auto 0;
 	}
 	.responsibility{
-		width: 60%;
+		width: 65%;
 	}
 	.toUp{
 		top: 80%;
