@@ -62,6 +62,17 @@ const changeBGCMenu = () => {
 let positionXVP = 500;
 //its for control position all construction
 let sumPosY = 0;
+// interval between circles
+let intCir = 30;
+// duration and interval between drawing
+// adaptive was made for more correctly work
+let durDraw = 1500;
+if (window.matchMedia("(min-width: 1024px)").matches) {
+	durDraw = 1000;
+}
+let intDraw = 50;
+//my name
+let vp = 'Vladislav Prikhodko';
 
 let showCircles = setInterval(() => {
 	//change color
@@ -79,28 +90,27 @@ let showCircles = setInterval(() => {
 	ctx.fill();
 //change position and her control
 	sumPosY += positionY;
-	console.log(positionX);
-	positionX += 30;
+	positionX += intCir;
 //draw name
 	let minusOrPlus = random(0,1);
 	if (minusOrPlus == 0 || sumPosY >= 5500){
-		positionY -= 30;
+		positionY -= intCir;
 
 		ctx.font = "48px consolas";
 		ctx.fillStyle = colorCircle;
-	  	ctx.fillText("Vladislav Prikhodko", positionXVP, positionY - 50);
+	  	ctx.fillText(vp, positionXVP, positionY - 50);
 	}
 	else{
-		positionY += 30;
+		positionY += intCir;
 
 		ctx.font = "48px consolas";
 		ctx.fillStyle = colorCircle;
-	  	ctx.fillText("Vladislav Prikhodko", positionXVP, positionY + 50);
+	  	ctx.fillText(vp, positionXVP, positionY + 50);
 	}
 //opacity
 	ctx.globalAlpha += 0.1;
 
-},50);
+},intDraw);
 //get body in html
 const body = document.querySelector('body');
 //show body
@@ -121,7 +131,7 @@ setTimeout(() => {
 
 	changeBGCMenu();
 
-},1000);
+},durDraw);
 
 //my age
 const myAge = document.querySelector('.myAge');
@@ -217,37 +227,63 @@ setTimeout(() => {
 
   const loader = new THREE.GLTFLoader();
 
-  loader.load( 'model/zeus/scene.gltf', function ( gltf ) {
-	  gltf.scene.position.set(0.5,-2.2,15.5);
-	  gltf.scene.scale.set(0.4,0.3,0.4);
+	if (window.matchMedia("(min-width: 1024px)").matches){
+	  loader.load( 'model/zeus/scene.gltf', function ( gltf ) {
+		  gltf.scene.position.set(0.5,-2.2,15.5);
+		  gltf.scene.scale.set(0.4,0.31,0.4);
 
-	  gltf.scene.rotation.y = 1.5;
-	  gltf.scene.rotation.x = 0.2;
+		  gltf.scene.rotation.y = 1.5;
+		  gltf.scene.rotation.x = 0.2;
 
-	  scene.add( gltf.scene );
-	  scene.fog = new THREE.FogExp2(colorCircle, .05, .1);
+		  scene.add( gltf.scene );
+		  scene.fog = new THREE.FogExp2(colorCircle, .05, .1);
 
-	  function render(time) {
-	    gltf.scene.rotation.y += 0.01;
-	    renderer.render(scene, camera);
+		  function render(time) {
+		    gltf.scene.rotation.y += 0.01;
+		    renderer.render(scene, camera);
 
-	    requestAnimationFrame(render);
-	  }
-	  requestAnimationFrame(render);
-	});
+		    requestAnimationFrame(render);
+		  }
+		  requestAnimationFrame(render);
+		});
+	}
+	if (window.matchMedia("(max-width: 640px)").matches){
+		renderer.setSize( window.innerWidth - 100, window.innerHeight );
+
+	  loader.load( 'model/zeus/scene.gltf', function ( gltf ) {
+		  gltf.scene.position.set(0,-1.5,15.5);
+		  gltf.scene.scale.set(0.3,0.2,0.3);
+
+		  gltf.scene.rotation.y = 1.5;
+		  gltf.scene.rotation.x = 0.2;
+
+		  scene.add( gltf.scene );
+		  scene.fog = new THREE.FogExp2(colorCircle, .05, .1);
+
+		  function render(time) {
+		    gltf.scene.rotation.y += 0.01;
+		    renderer.render(scene, camera);
+
+		    requestAnimationFrame(render);
+		  }
+		  requestAnimationFrame(render);
+		});
+	}
 },1000);
+
 //!scroll magic
 //show aboutMe and canvas
+
 const tl = gsap.timeline();
-tl.from('.wowItsMyPhoto', {xPercent: -100})
+tl.from('.wowItsMyPhoto', {xPercent: -140})
   .from('.fieldForDrawing', {yPercent: 100, opacity: -5})
   .from('.toUp', {xPercent: 100, opacity: -5});
 
 ScrollTrigger.create({
 	animation: tl,
-	trigger: '.menu',
-	start: 'top top',
-	end: '+=400',
+	trigger: 'circlesAndName',
+	start: '0px 0px',
+	end: '-=400',
 	scrub: true,
 	anticipatePin: 10
 })
@@ -255,26 +291,26 @@ ScrollTrigger.create({
 const tl1 = gsap.timeline();
 tl1.from('.sliders', {xPercent: -300, opacity: -5})
   .from('.mySkills', {yPercent: 200, opacity: -5})
-  .from('.josukeWithLap', {xPercent: 100, opacity: -5});
+  .from('.josukeWithLap', {xPercent: -100, opacity: -5});
 
 ScrollTrigger.create({
 	animation: tl1,
-	trigger: '.fieldForDrawing',
-	start: 'top top',
-	end: '+=200',
+	trigger: '.circlesAndName',
+	start: 'bottom',
+	end: '-=200',
 	scrub: true,
 	anticipatePin: 10
 })
 //descriptions and aristotle
 const tl2 = gsap.timeline();
 tl2.from('.fullDescription', {opacity: -5})
-  .from('.aristotle', {opacity: -5})
+  .from('.zeus', {opacity: -5})
 
 ScrollTrigger.create({
 	animation: tl2,
 	trigger: '.sliders',
 	start: 'top top',
-	end: '+=100',
+	end: '-=200',
 	scrub: true,
 	anticipatePin: 10
 })
@@ -286,7 +322,7 @@ ScrollTrigger.create({
 	animation: tl3,
 	trigger: '.fullDescription',
 	start: 'top top',
-	end: '+=200',
+	end: '-=200',
 	scrub: true,
 	anticipatePin: 10
 })
@@ -344,7 +380,7 @@ language.onclick = () =>{
 
 		fullDescription.innerHTML = 'Я учусь самостоятельно, создаю сайты с 2019 года, освоил 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS и 65% CANVAS, позволяющего рисовать на поле выше. <br/> Я выполнил свой первый заказ на фрилансе и похвастался перед родителям. <br/> В 2021 году я поступил в колледж, чтобы продолжить учиться на программиста.';
 
-		responsibility.textContent = 'Я не несу ответственность за результаты ваших мечтаний или пропагандистские рисунки, изображённые в песочнице';
+		responsibility.textContent = 'Моё стремление - Эйдос по Платону';
 		responsibility.style.width =  '90%';
 
 		ctxFD.clearRect(0,0, 500, 400);
@@ -363,7 +399,7 @@ language.onclick = () =>{
 
 		fullDescription.innerHTML = 'I' + `'` + 'm studying independently, I have been making websites since 2019, I have mastered 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS and 65% CANVAS, which allows you to draw on the field. <br/> I completed my first order on freelance and bragged to my parents. <br/> In 2021, I entered college to continue my studies as a programmer.';
 
-		responsibility.textContent = 'I am not responsible for the results of your dreams or propaganda drawings depicted in the sandbox';
+		responsibility.textContent = 'My aspiration - Eydos according to Plato';
 		responsibility.style.width =  '80%';
 
 		ctxFD.clearRect(0,0, 500, 400);
@@ -373,7 +409,7 @@ language.onclick = () =>{
 //!music
 const audioQueen = new Audio('music/Queen_-_Bohemian_Rhapsody.mp3');
 
-body.onclick = () =>{
+/*body.onclick = () =>{
 	audioQueen.volume = 0.1;
 	audioQueen.play();
-}
+}*/
