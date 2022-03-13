@@ -12,9 +12,11 @@ if (window.matchMedia("(max-width: 640px)").matches) {
 
 	positionX = 0;
 	positionXVP = -5;
-	intCir = 30;
-	intDraw = 100;
+	mvs = 3;
+	intCir = 25;
+	intDraw = 50;
 	vp = 'Vlad Prikhodko';
+	fontVP = "38px consolas"
 	//field for drawing
 	canvasFD.remove();
 

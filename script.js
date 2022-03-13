@@ -60,19 +60,22 @@ const changeBGCMenu = () => {
 //!interval
 //make positionXVP (Vlad Prikhodko) for adaptation
 let positionXVP = 500;
+//middle value for size and for adaptive
+let mvs = 5;
 //its for control position all construction
 let sumPosY = 0;
 // interval between circles
 let intCir = 30;
 // duration and interval between drawing
 // adaptive was made for more correctly work
-let durDraw = 1500;
+let durDraw = 2000;
 if (window.matchMedia("(min-width: 1024px)").matches) {
 	durDraw = 1000;
 }
 let intDraw = 50;
 //my name
 let vp = 'Vladislav Prikhodko';
+let fontVP = "48px consolas";
 
 let showCircles = setInterval(() => {
 	//change color
@@ -85,7 +88,7 @@ let showCircles = setInterval(() => {
 	ctx.beginPath();
 	ctx.fillStyle = colorCircle;
 //get size circle
-	let sizeCircle = random(10,50);
+	let sizeCircle = random(mvs * 2,mvs * 10);
 	ctx.arc(positionX,positionY,sizeCircle,0,Math.PI*2,true);
 	ctx.fill();
 //change position and her control
@@ -96,14 +99,14 @@ let showCircles = setInterval(() => {
 	if (minusOrPlus == 0 || sumPosY >= 5500){
 		positionY -= intCir;
 
-		ctx.font = "48px consolas";
+		ctx.font = fontVP;
 		ctx.fillStyle = colorCircle;
 	  	ctx.fillText(vp, positionXVP, positionY - 50);
 	}
 	else{
 		positionY += intCir;
 
-		ctx.font = "48px consolas";
+		ctx.font = fontVP;
 		ctx.fillStyle = colorCircle;
 	  	ctx.fillText(vp, positionXVP, positionY + 50);
 	}
@@ -381,7 +384,7 @@ language.onclick = () =>{
 		fullDescription.innerHTML = 'Я учусь самостоятельно, создаю сайты с 2019 года, освоил 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS и 65% CANVAS. <br/> Я выполнил свой первый заказ на фрилансе и похвастался перед родителям. <br/> В 2021 году я поступил в колледж, чтобы продолжить учиться на программиста.';
 
 		responsibility.textContent = 'Моё стремление - Эйдос по Платону';
-		responsibility.style.width =  '90%';
+		responsibility.style.width =  '45%';
 
 		ctxFD.clearRect(0,0, 500, 400);
 		ctxFD.fillText("наведите", 190, 200);
@@ -400,7 +403,7 @@ language.onclick = () =>{
 		fullDescription.innerHTML = 'I' + `'` + 'm studying independently, I have been making websites since 2019, I have mastered 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS and 65% CANVAS. <br/> I completed my first order on freelance and bragged to my parents. <br/> In 2021, I entered college to continue my studies as a programmer.';
 
 		responsibility.textContent = 'My aspiration - Eydos according to Plato';
-		responsibility.style.width =  '80%';
+		responsibility.style.width =  '60%';
 
 		ctxFD.clearRect(0,0, 500, 400);
 		ctxFD.fillText("hover over", 190, 200);

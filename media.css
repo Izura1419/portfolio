@@ -4,7 +4,7 @@
 		width:  50%;
 	}
 	.wowItsMyPhoto{
-		margin-left: -65px;
+		margin-left: -80px;
 	}
 
 	.wowItsMyPhoto:hover .part1, .wowItsMyPhoto:hover .part2{
@@ -13,7 +13,9 @@
 	.wowItsMyPhoto:hover .part2{
 		margin: 180px 30px;
 	}
-
+	.descriptionOfMe{
+		font-size: 2em;
+	}
 	.sliders{
 		margin: 50px 0 180px 50px;
 	}
@@ -87,7 +89,7 @@
 	.percentageOfStudy{
 		position: absolute;
 		top: 0%;
-		left: 185%;
+		left: 190%;
 	}
 	.josukeWithLap{
 		position: absolute;
@@ -105,7 +107,7 @@
 	}
 	.toUp{
 		top: 80%;
-		left: 75%;
+		left: 70%;
 }
 @media (max-width: 480px) {
 	.menuAdap{
