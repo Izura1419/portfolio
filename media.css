@@ -74,7 +74,7 @@
 		margin: 250px auto 100px;
 	}
 	.sliders{
-		margin: 50px 0 180px 25px;
+		margin: 50px 0 180px 15px;
 	}
 	.slider{
 		pointer-events: none;
@@ -89,7 +89,7 @@
 	.percentageOfStudy{
 		position: absolute;
 		top: 0%;
-		left: 190%;
+		left: 195%;
 	}
 	.josukeWithLap{
 		position: absolute;
