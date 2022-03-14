@@ -418,7 +418,7 @@ language.onclick = () =>{
 //!music
 const audioQueen = new Audio('music/Queen_-_Bohemian_Rhapsody.mp3');
 
-/*body.onclick = () =>{
+body.onclick = () =>{
 	audioQueen.volume = 0.1;
 	audioQueen.play();
-}*/
+}
