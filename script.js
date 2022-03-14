@@ -68,7 +68,7 @@ let sumPosY = 0;
 let intCir = 30;
 // duration and interval between drawing
 // adaptive was made for more correctly work
-let durDraw = 2000;
+let durDraw = 1500;
 if (window.matchMedia("(min-width: 1024px)").matches) {
 	durDraw = 1000;
 }
@@ -384,7 +384,10 @@ language.onclick = () =>{
 		fullDescription.innerHTML = 'Я учусь самостоятельно, создаю сайты с 2019 года, освоил 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS и 65% CANVAS. <br/> Я выполнил свой первый заказ на фрилансе и похвастался перед родителям. <br/> В 2021 году я поступил в колледж, чтобы продолжить учиться на программиста.';
 
 		responsibility.textContent = 'Моё стремление - Эйдос по Платону';
-		responsibility.style.width =  '45%';
+		responsibility.style.width =  '26%';
+		if (window.matchMedia("(max-width: 640px)").matches) {
+			responsibility.style.width =  '50%';
+		}
 
 		ctxFD.clearRect(0,0, 500, 400);
 		ctxFD.fillText("наведите", 190, 200);
@@ -403,7 +406,10 @@ language.onclick = () =>{
 		fullDescription.innerHTML = 'I' + `'` + 'm studying independently, I have been making websites since 2019, I have mastered 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS and 65% CANVAS. <br/> I completed my first order on freelance and bragged to my parents. <br/> In 2021, I entered college to continue my studies as a programmer.';
 
 		responsibility.textContent = 'My aspiration - Eydos according to Plato';
-		responsibility.style.width =  '60%';
+		responsibility.style.width =  '32%';
+		if (window.matchMedia("(max-width: 640px)").matches) {
+			responsibility.style.width =  '65%';
+		}
 
 		ctxFD.clearRect(0,0, 500, 400);
 		ctxFD.fillText("hover over", 190, 200);
