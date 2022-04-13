@@ -381,7 +381,7 @@ language.onclick = () =>{
 
 		mySkills.textContent = 'Мои навыки';
 
-		fullDescription.innerHTML = 'Я учусь самостоятельно, создаю сайты с 2019 года, освоил 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS и 65% CANVAS. <br/> Я выполнил свой первый заказ на фрилансе и похвастался перед родителям. <br/> В 2021 году я поступил в колледж, чтобы продолжить учиться на программиста.';
+		fullDescription.innerHTML = 'Я учусь самостоятельно, создаю сайты с 2019 года. <br/> Я выполнил свой первый заказ на фрилансе и похвастался перед родителям. <br/> В 2021 году я поступил в колледж, чтобы продолжить учиться на программиста.';
 
 		responsibility.textContent = 'Моё стремление - Эйдос по Платону';
 		responsibility.style.width =  '26%';
@@ -403,7 +403,7 @@ language.onclick = () =>{
 
 		mySkills.textContent = 'My skills';
 
-		fullDescription.innerHTML = 'I' + `'` + 'm studying independently, I have been making websites since 2019, I have mastered 75% HTML, 90% CSS, 55% JAVASCRIPT, 30% WORDPRESS and 65% CANVAS. <br/> I completed my first order on freelance and bragged to my parents. <br/> In 2021, I entered college to continue my studies as a programmer.';
+		fullDescription.innerHTML = 'I' + `'` + 'm studying independently, I have been making websites since 2019. <br/> I completed my first order on freelance and bragged to my parents. <br/> In 2021, I entered college to continue my studies as a programmer.';
 
 		responsibility.textContent = 'My aspiration - Eydos according to Plato';
 		responsibility.style.width =  '32%';
