@@ -377,7 +377,7 @@ language.onclick = () =>{
 		myWorks.textContent = 'Мои работы';
 		contacts.textContent = 'Контакты';
 
-		descriptionOfMe.textContent = 'Я Владислав Приходько, 16-летний фронтенд разработчик из России';
+		descriptionOfMe.textContent = `Я Владислав Приходько, ${myAge.textContent}-летний фронтенд разработчик из России`;
 
 		mySkills.textContent = 'Мои навыки';
 
